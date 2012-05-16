@@ -1,0 +1,56 @@
+body{background:url(images/body_bg.png) repeat scroll 0 0 transparent;color:#fff;}
+.nav > li > a:hover{background:none}
+a{color:#fff;}
+a:hover{color:#4C9CFF;}
+.icons{background-image:url(images/sprites.png);background-repeat:no-repeat;}
+.header{position:fixed;z-index:9999;width:100%;background:url(images/top_nav_bg.png) repeat-x scroll 0 0 transparent}
+.header .header-container{max-width:1000px;height:90px;overflow:hidden;margin:0 auto}
+.header .logo a{background-position:11px 2px;display:block;height:71px;text-indent:-9999px;width:119px;}
+.header .logo,.event .nav li{float:left;margin:0 9px;}
+.header .top-nav{float:right}
+.header .top-nav ul{overflow:hidden;margin:0}
+.header .top-nav ul li{color:#FFF;float:left;font-size:16px;height:80px;line-height:16px;text-decoration:none;text-transform:uppercase;list-style:none}
+.header .top-nav ul li span{color:#B9B9B9;display:block;padding:31px 30px 30px;}
+.header .top-nav ul li.active span{border-top:5px solid #4c9cff;padding-top:26px}
+.header .top-nav ul li span:hover{color:#fff;border-top:5px solid #4a4a4a;padding-top:26px}
+.header .top-nav .sina-weibo span{background-position:-139px 0;display:block;height:36px;margin:22px 0;padding:0;text-indent:-9999px;width:36px;}
+.header .top-nav .sina-weibo span:hover{border-top:none;background-position:-139px -47px}
+.container{position:relative;width:100%}
+.container .slider{width:1000px;height:400px;margin:0 auto;padding-top:79px;}
+.container .event{background:url("images/eventbar_bg.png") repeat-x scroll 0 0 transparent;height:227px;left:0;margin-top:-27px;position:absolute;width:100%;z-index:9997;}
+.container .event span{display:block;height:128px;text-indent:-9999px;width:123px}
+.container .event .nav{overflow:hidden;width:987px;margin:0 auto;padding-top:47px;}
+.container .event .event1{background-position:3px -103px;}
+.container .event .event2{background-position:-137px -103px;}
+.container .event .event3{background-position:-277px -103px;}
+.container .event .event4{background-position:-417px -103px;}
+.container .event .event5{background-position:-557px -103px;}
+.container .event .event6{background-position:-697px -103px;}
+.container .event .event7{background-position:-837px -103px;}
+.container .content{margin:0 auto;padding-top:200px;width:1000px;overflow:hidden;}
+.container .content .main-area{float:left;width:650px;}
+.container .content .sidebar{float:right;margin-top:11px;width:320px;}
+.container .content .main-area .main-post .title{background-position:-638px -548px;font-size:38px;font-weight:normal;line-height:40px;margin-bottom:18px;padding:40px 10px 10px 96px;}
+.container .content .main-area .main-post .line{background-position:-289px -767px;height:2px;}
+.container .content .main-area h2.title a{color:#fff;}
+.container .content .main-area .content-text{margin-bottom:32px;color:#a09d9e;font-size:18px;line-height:28px;}
+.container .content .main-area .event-time .title{color:#D8D7D7;font-size:22px;margin-top:23px;}
+.container .content .main-area .event-content{background-position:-1030px -119px;list-style:none outside none;margin:0;padding-left:45px;padding-top:25px;}
+.container .content .main-area .event-content li{font-size:16px;line-height:16px;margin-bottom:31px;font-weight:bolder;}
+.container .content .main-area .event-content li ul{list-style:none outside none;margin-left:129px;margin-top:-15px;}
+.container .content .main-area .event-content li ul li{margin-bottom:23px;font-weight:normal;}
+.container .content .main-area .event-content .current{color:#00ACFF;font-weight:bolder;}
+.container .content .main-area .event-content .f{font-weight:bolder;}
+.sidebar ul{margin:0;list-style:none outside none;}
+.sidebar ul span{text-indent:-9999px;display:block;margin-top:10px;}
+.sidebar .join-btn{background-position:1px -239px;height:78px;width:301px;}
+.sidebar .join-btn:hover{background-position:1px -331px;text-indent:-9999px;}
+.sidebar .tips-btn{background-position:1px -672px;height:82px;width:305px;}
+.sidebar .app-store-btn{background-position:1px -420px;height:81px;width:305px;}
+.sidebar .google-play-btn{background-position:1px -511px;height:81px;width:305px;}
+.sidebar .sina-weibo-btn{background-position:1px -603px;height:65px;width:305px;}
+.sidebar .widget-contact li{font-size:15px;line-height:19px;margin:5px 0;}
+.sidebar .widget .widget-title{font-size:24px;line-height:24px;margin:31px 0 25px 5px;}
+.sidebar .widget .contact-type{font-size:18px;line-height:18px;margin-bottom:14px;}
+.sidebar .widget .contact-name{color:#00ACFF;font-size:15px;line-height:15px;}
+.sidebar .widget li.line{background-position:-753px -609px;padding-bottom:33px;}
