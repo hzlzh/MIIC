@@ -15,51 +15,13 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
   <script src="js/modernizr-2.5.3.min.js" type="text/javascript"></script>
-  <script src="js/coin-slider.min.js" type="text/javascript"></script>
+  <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
   <script type="text/javascript">
-  $(document).ready(function() {
-    $('#coin-slider').coinslider({ 
-    width: 1000, // width of slider panel
-    height: 400, // height of slider panel
-    delay: 7000, // delay between images in ms
-    sDelay: 30, // delay beetwen squares in ms
-    opacity: 0.7, // opacity of title and navigation
-    titleSpeed: 500, // speed of title appereance in ms
-    effect: 'straight', // random, swirl, rain, straight
-    navigation: true, // prev next and buttons
-    hoverPause: true // pause on hover
-    });
-  });
-  // link click function
-  jQuery(function() {
-    jQuery('a[href*=#]').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var $target = jQuery(this.hash);
-        $target = $target.length && $target || jQuery('[name=' + this.hash.slice(1) + ']');
-        if ($target.length) {
-          var targetOffset = $target.offset().top;
-          jQuery('html,body').animate({
-            scrollTop: targetOffset
-          }, 500);
-          return false;
-        }
-      }
-    });
-  });
   // GA
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-31833303-1']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
   </script>
-  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9450348" charset="UTF-8"></script>
 </head>
-<body data-spy="scroll">
+<body data-spy="scroll" onload="load_animations()" data-twttr-rendered="true">
   <header class="header">
     <div class="header-container">
       <h1 class="logo"><a class="icons" href="#">Logo</a></h1>
@@ -76,13 +38,25 @@
     </div>
   </header>
   <div id="index" class="index container">
-    <div class="slider">
-      <div id='coin-slider'>
-        <img src="css/images/111111.png" alt="" />
-        <img src="css/images/ff2222.png" alt="" />
+    <div class="slideshow">
+      <div class="header_img" id="aside2">
+        <div class="container_12">
+          <div class="slider">
+            <div id="header_images">
+              <img src="css/images/banner-1.jpg" class="header_image" color=  "#033153" alt="" link="" target="_self">
+              <img src="css/images/banner-2.jpg" class="header_image" color=  "#93bf00" alt="" link="" target="_self">
+              <img src="css/images/banner-3.jpg" class="header_image" color=  "#f9d406" alt="" link="" target="_self">
+              <img src="css/images/banner-4.jpg" class="header_image" color=  "#0c1e4c" alt="" link="" target="_self">
+            </div>
+            <div class="header_controls">
+              <a href="#" class="icons" id="header_controls_left">Previous</a>
+              <a href="#" class="icons" id="header_controls_right">Next</a>
+            </div>
+            <div id="overlay_bg"></div>
+          </div>
+        </div>
       </div>
     </div>
-
     <div class="event">
       <nav class="eventnav">
         <ul class="nav">
@@ -142,7 +116,7 @@
             <li><span class="tips-btn icons">下载“商业价值”客户端不仅可以及时查看最  新会议信息，更可以通过客户端直接报名，马上试试吧。</span></li>
             <li><a target="_blank" href="http://itunes.apple.com/cn/app/id388097988?mt=8"><span class="app-store-btn icons">Download in app store</span></a></li>
             <li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.businessvalue.android.app"><span class="google-play-btn icons">Download in google play</span></a></li>
-            <li><a target="_blank" href="http://weibo.com/businessvalue"><span class="sina-weibo-btn icons">Follow sina weibo</span></a></li>
+            <li><a target="_blank" href="http://weibo.com/businessvalue"><span class="sina-weibo-btn icons"><iframe style="top: 10px; position: absolute; left: 70px;" width="136" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0" src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=136&height=24&uid=1615813834&style=2&btn=red&dpc=1"></iframe></span></a></li>
           </ul>
         </aside>
         <aside class="widget widget-contact">
@@ -178,7 +152,8 @@
     </div>
   </div>
   <div id="meeting-agenda" class="meeting-agenda container">
-    <div class="date7-5 agenda-box icons">
+    <div class="saw"></div>
+    <div class="date7-6 agenda-box icons">
       <h3>下午：移动互联网创新大会分论坛（ABC）</h3>
       <ul>
         <li>分论坛一：移动社交：正在爆发的细分领域机会
@@ -222,7 +197,7 @@
         </li>
       </ul>
     </div>
-    <div class="date7-6 agenda-box icons">
+    <div class="date7-7 agenda-box icons">
       <h3>上午：移动互联创新大会趋势论坛</h3>
       <ul>
         <li>
@@ -271,77 +246,64 @@
     </div>
   </div>
   <div id="guest-profile" class="guest-profile container">
+    <div class="saw"></div>
     <div class="guest-profile-box">
       <h3>嘉宾简介</h3>
       <ul>
         <li>
           <ul>
-            <li class="avatar"><img src="images/profiles/wangzhong.png" alt=""></li>
-            <li class="name">王忠</li>
-            <li class="title">xxxx公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。有一些朋友，除了胸腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
+            <li class="avatar"><img src="images/profiles/likaifu.png" alt=""></li>
+            <li class="name">李开复</li>
+            <li class="title">创新工场董事长兼首席执行官</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li class="avatar"><img src="images/profiles/liuxiangming.png" alt=""></li>
-            <li class="name">刘湘明</li>
-            <li class="title">商业价值公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。有一些朋友，除了胸、腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
+            <li class="avatar"><img src="images/profiles/yuyongfu.png" alt=""></li>
+            <li class="name">俞永福</li>
+            <li class="title">UC优视董事长兼首席执行官</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li class="avatar"><img src="images/profiles/wuchanghua.png" alt=""></li>
-            <li class="name">吴昌华</li>
-            <li class="title">xxxx公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。                有一些朋友，除了胸、腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
+            <li class="avatar"><img src="images/profiles/leijun.png" alt=""></li>
+            <li class="name">雷军</li>
+            <li class="title">小米创办人，董事长兼CEO</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li class="avatar"><img src="images/profiles/zhouweiyan.png" alt=""></li>
-            <li class="name">周惟彦</li>
-            <li class="title">xxxx公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。有一些朋友，除了胸、腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
+            <li class="avatar"><img src="images/profiles/zhangtao.png" alt=""></li>
+            <li class="name">张涛</li>
+            <li class="title">大众点评 CEO</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li class="avatar"><img src="images/profiles/wangzhong.png" alt=""></li>
-            <li class="name">王忠</li>
-            <li class="title">xxxx公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。有一些朋友，除了胸腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
+            <li class="avatar"><img src="images/profiles/zhangxiangdong.png" alt=""></li>
+            <li class="name">张向东</li>
+            <li class="title">3G门户</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li class="avatar"><img src="images/profiles/liuxiangming.png" alt=""></li>
-            <li class="name">刘湘明</li>
-            <li class="title">商业价值公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。有一些朋友，除了胸、腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
+            <li class="avatar"><img src="images/profiles/shenzhenlai.png" alt=""></li>
+            <li class="name">沈振来</li>
+            <li class="title">华硕全球CEO</li>
           </ul>
         </li>
         <li>
           <ul>
-            <li class="avatar"><img src="images/profiles/wuchanghua.png" alt=""></li>
-            <li class="name">吴昌华</li>
-            <li class="title">xxxx公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。                有一些朋友，除了胸、腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            <li class="avatar"><img src="images/profiles/zhouweiyan.png" alt=""></li>
-            <li class="name">周惟彦</li>
-            <li class="title">xxxx公司 总经理</li>
-            <li class="bio">这类活动流行，本质上是人的“秀”的心理，希望得到他人的关注。有一些朋友，除了胸、腿、指甲啥的，也没什么好“秀”的了；所以一有这样的机会，就很踊跃的参与</li>
+            <li class="avatar"><img src="images/profiles/wangxiaochuan.png" alt=""></li>
+            <li class="name">王小川</li>
+            <li class="title">搜狗CEO</li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
   <div id="cooperativ-partner" class="cooperativ-partner container">
+    <div class="saw"></div>
     <div class="cooperativ-partner-box">
       <h3>合作伙伴</h3>
       <ul>
@@ -349,22 +311,29 @@
           <ul>
             <li class="title">联合主办</li>
             <li><a title="商业价值" target="_blank" href="http://businessvalue.com.cn/"><img src="images/businessvalue.png" alt=""></a></li>
-            <li><a href="#"><img src="images/ucweb.png" alt=""></a></li>
+            <li><a title="优视科技" target="_blank" href="http://www.uc.cn/"><img src="images/ucweb.png" alt=""></a></li>
             <li><a title="极客公园" target="_blank" href="http://www.geekpark.net/"><img src="images/geekpark.png" alt=""></a></li>
           </ul>
           <div class="long-line icons"></div>
         </li>
         <li>
           <ul>
-            <li class="title">联合发起机构</li>
-            <li><a href="#"><img src="images/qualcomm.png" alt=""></a></li>
+            <li class="title">独家半导体领域联合发起机构</li>
+            <li><a title="高通" target="_blank" href="http://www.qualcomm.cn/ "><img src="images/qualcomm.png" alt=""></a></li>
           </ul>
           <div class="long-line icons"></div>
         </li>
         <li>
           <ul>
-            <li class="title">智能手机支持</li>
-            <li><a href="#"><img src="images/xiaomi.png" alt=""></a></li>
+            <li class="title">独家移动终端支持机构</li>
+            <li><a title="华硕" target="_blank" href="http://www.asus.com.cn/"><img src="images/asus.png" alt=""></a></li>
+          </ul>
+          <div class="long-line icons"></div>
+        </li>
+        <li>
+          <ul>
+            <li class="title">独家智能手机支持机构：</li>
+            <li><a title="小米" target="_blank" href="http://www.xiaomi.com/"><img src="images/xiaomi.png" alt=""></a></li>
           </ul>
           <div class="long-line icons"></div>
         </li>
@@ -382,6 +351,7 @@
     </div>
   </div>
   <div id="join-in" class="join-in container">
+    <div class="saw"></div>
     <div class="join-in-box">
       <div class="box-l">
         <h3>媒体、机构合作联系：</h3>
