@@ -5,7 +5,6 @@
   <title>MIIC</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width; "/>
   <meta name="robots" content="index, follow">
   <meta name="copyright" content="Copyright (c) 2012 BusinessValue.com.cn. All Rights Reserved.">
   <link rel="shortcut icon" href="favicon.ico">
@@ -26,7 +25,7 @@
     sDelay: 30, // delay beetwen squares in ms
     opacity: 0.7, // opacity of title and navigation
     titleSpeed: 500, // speed of title appereance in ms
-    effect: 'rain', // random, swirl, rain, straight
+    effect: 'straight', // random, swirl, rain, straight
     navigation: true, // prev next and buttons
     hoverPause: true // pause on hover
     });
@@ -47,12 +46,23 @@
       }
     });
   });
+  // GA
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31833303-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
   </script>
+  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9450348" charset="UTF-8"></script>
 </head>
 <body data-spy="scroll">
   <header class="header">
     <div class="header-container">
-      <h1 class="logo"><a class="icons" href="##">Logo</a></h1>
+      <h1 class="logo"><a class="icons" href="#">Logo</a></h1>
       <nav class="top-nav">
         <ul class="nav">
           <li><a href="#index"><span>首页</span></a></li>
@@ -60,7 +70,7 @@
           <li><a href="#guest-profile"><span>嘉宾简介</span></a></li>
           <li><a href="#cooperativ-partner"><span>合作伙伴</span></a></li>
           <li><a href="#join-in"><span>现在报名</span></a></li>
-          <li class="sina-weibo"><a href="##"><span class="icons">新浪微博</span></a></li>
+          <li class="sina-weibo"><a title="《商业价值》新浪微博官方账号" target="_blank" href="http://weibo.com/businessvalue"><span class="icons">新浪微博</span></a></li>
         </ul>
       </nav>
     </div>
@@ -68,28 +78,28 @@
   <div id="index" class="index container">
     <div class="slider">
       <div id='coin-slider'>
-        <img src='css/images/1.png' >
-        <img src='css/images/2.png' >
+        <img src="css/images/111111.png" alt="" />
+        <img src="css/images/ff2222.png" alt="" />
       </div>
     </div>
 
     <div class="event">
       <nav class="eventnav">
         <ul class="nav">
-          <li><a href="##"><span class="event1 icons">邀约嘉宾</span></a></li>
-          <li><a href="##"><span class="event2 icons">全互动</span></a></li>
-          <li><a href="##"><span class="event3 icons">会议主题</span></a></li>
-          <li><a href="##"><span class="event4 icons">好运开门</span></a></li>
-          <li><a href="##"><span class="event5 icons">极客评测</span></a></li>
-          <li><a href="##"><span class="event6 icons">抽奖环节</span></a></li>
-          <li><a href="##"><span class="event7 icons">抽奖环节</span></a></li>
+          <li><span class="event1 icons">邀约嘉宾</span></li>
+          <li><span class="event2 icons">全互动</span></li>
+          <li><span class="event3 icons">会议主题</span></li>
+          <li><span class="event4 icons">好运开门</span></li>
+          <li><span class="event5 icons">极客评测</span></li>
+          <li><span class="event6 icons">抽奖环节</span></li>
+          <li><span class="event7 icons">抽奖环节</span></li>
         </ul>
       </nav>
     </div>
     <div class="content">
       <div class="main-area">
         <article class="main-post">
-          <h2 class="title icons"><a href="##">未来的移动互联网</a></h2>
+          <h2 class="title icons"><a href="#">未来的移动互联网</a></h2>
           <div class="content-text">未来5年，移动互联网是最大的商业变量。从2007年开始，移 动互联网在过去5年发生了翻天覆地的变化，带宽、硬件、操作系统、软件和云端服务合力推动着  移动互联网不断创新，移动互联网用户也大规模爆发。这种爆发，正携裹着更多力量越来越强。不 管是操作系统的权力变大、应用的崛起，还是硬件、带宽的突破和人机互动方式的改变，都无不彰  显着过去5年移动互联网重大乃至颠覆性的改变而在未来5年，从芯片到云端，有太多创新不可预 知。在这样快速变化的时代，产业需要的不是虚无缥缈的聚会，而是对趋势的把握和技术的探讨。  持续两天，超过3000人次的产业盛会。行业领袖的趋势分享与多达6个分论坛的深入探讨，结合两 天的移动互联网创新嘉年华一起揭示移动互联网创新的趋势与商业价值释放路径。</div>
           <div class="line icons"></div>
         </article>
@@ -128,11 +138,11 @@
       <div class="sidebar">
         <aside class="widget">
           <ul>
-            <li><a href="##"><span class="join-btn icons">免费报名</span></a></li>
+            <li><a href="#join-in"><span class="join-btn icons">免费报名</span></a></li>
             <li><span class="tips-btn icons">下载“商业价值”客户端不仅可以及时查看最  新会议信息，更可以通过客户端直接报名，马上试试吧。</span></li>
-            <li><a href="##"><span class="app-store-btn icons">Download in   app store</span></a></li>
-            <li><a href="##"><span class="google-play-btn icons">Download in   google play</span></a></li>
-            <li><a href="##"><span class="sina-weibo-btn icons">Follow sina  weibo</span></a></li>
+            <li><a target="_blank" href="http://itunes.apple.com/cn/app/id388097988?mt=8"><span class="app-store-btn icons">Download in app store</span></a></li>
+            <li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.businessvalue.android.app"><span class="google-play-btn icons">Download in google play</span></a></li>
+            <li><a target="_blank" href="http://weibo.com/businessvalue"><span class="sina-weibo-btn icons">Follow sina weibo</span></a></li>
           </ul>
         </aside>
         <aside class="widget widget-contact">
@@ -149,7 +159,7 @@
           <li class="line icons">
             <div class="contact-type">媒体联系：</div>
             <ul>
-              <li class="contact-name">宋玉冰</span></li>
+              <li class="contact-name">宋玉冰</li>
               <li>电  话: 010-85711956</li>
               <li>Email: <a href="mailto:songyubing@windmaker.com.cn">songyubing@windmaker.com.cn</a></li>
             </ul>
@@ -157,7 +167,7 @@
           <li>
             <div class="contact-type">广告联系：</div>
             <ul>
-              <li class="contact-name">张瑜</span></li>
+              <li class="contact-name">张瑜</li>
               <li>电  话: 13601390310</li>
               <li>Email: <a href="mailto:zhangyu@windmaker.com.cn">zhangyu@windmaker.com.cn</a></li>
             </ul>
@@ -196,8 +206,8 @@
             <li><span class="time">备选宣讲者：  </span><span class="subject">EA、Gameloft、AppAnnie、AppING、尼毕鲁、iMonster</span></li>
           </ul>
         </li>
-        <li>
-          <ul>分论坛三：HTML5引发的Web反击战
+        <li>分论坛三：HTML5引发的Web反击战
+          <ul>
             <li><span class="time">14 : 00 ~ 14 : 15</span><span class="subject">从浏览器到平台（优视科技创始人、产品总裁何小鹏）</span></li>
             <li><span class="time">14 : 15 ~ 14 : 45</span><span class="subject">Workshop互动讨论1</span></li>
             <li><span class="time">14 : 45 ~ 15 : 00</span><span class="subject">移动互联网的Web图景（百度无线总经理岳国峰）</span></li>
@@ -217,16 +227,16 @@
       <ul>
         <li>
           <ul>
-            <li><span class="time">09 : 00 ~ 09 : 20</span><span class="subject">以人为中心的移动互联网产品进化论（优视科技CEO俞永福）</li>
-            <li><span class="time">09 : 20 ~ 09 : 40</span><span class="subject">移动互联网创新的“甜蜜点”（创新工场CEO李开复）</li>
-            <li><span class="time">09 : 40 ~ 10 : 00</span><span class="subject">用户想要的是什么？（小米公司CEO 雷军）</li>
-            <li><span class="time">10 : 00 ~ 10 : 20</span><span class="subject">体验决定终端的未来（高通）</li>
-            <li><span class="time">10 : 20 ~ 10 : 40</span><span class="subject">随需扩展带来的互联网一体化（华硕）</li>
-            <li><span class="time">10 : 40 ~ 11 : 00</span><span class="subject">微时代、大机会（新浪微博或腾讯微博）</li>
-            <li><span class="time">11 : 00 ~ 11 : 20</span><span class="subject">移动时代的用户体验决定论（张向东 3G门户创始人）</li>
-            <li><span class="time">11 : 20 ~ 11 : 40</span><span class="subject">圆桌讨论：移动广告成熟时（移动广告运营商）</li>
-            <li><span class="time">11 : 40 ~ 12 : 00</span><span class="subject">圆桌讨论：全球市场的机遇与挑战（联盟发起机构）</li>
-            <li><span class="time">12 : 00 ~ 12 : 15</span><span class="subject">“中国移动互联网国际化联盟”发起仪式</li>
+            <li><span class="time">09 : 00 ~ 09 : 20</span><span class="subject">以人为中心的移动互联网产品进化论（优视科技CEO俞永福）</span></li>
+            <li><span class="time">09 : 20 ~ 09 : 40</span><span class="subject">移动互联网创新的“甜蜜点”（创新工场CEO李开复）</span></li>
+            <li><span class="time">09 : 40 ~ 10 : 00</span><span class="subject">用户想要的是什么？（小米公司CEO 雷军）</span></li>
+            <li><span class="time">10 : 00 ~ 10 : 20</span><span class="subject">体验决定终端的未来（高通）</span></li>
+            <li><span class="time">10 : 20 ~ 10 : 40</span><span class="subject">随需扩展带来的互联网一体化（华硕）</span></li>
+            <li><span class="time">10 : 40 ~ 11 : 00</span><span class="subject">微时代、大机会（新浪微博或腾讯微博）</span></li>
+            <li><span class="time">11 : 00 ~ 11 : 20</span><span class="subject">移动时代的用户体验决定论（张向东 3G门户创始人）</span></li>
+            <li><span class="time">11 : 20 ~ 11 : 40</span><span class="subject">圆桌讨论：移动广告成熟时（移动广告运营商）</span></li>
+            <li><span class="time">11 : 40 ~ 12 : 00</span><span class="subject">圆桌讨论：全球市场的机遇与挑战（联盟发起机构）</span></li>
+            <li><span class="time">12 : 00 ~ 12 : 15</span><span class="subject">“中国移动互联网国际化联盟”发起仪式</span></li>
           </ul>
         </li>
       </ul>
@@ -338,34 +348,34 @@
         <li>
           <ul>
             <li class="title">联合主办</li>
-            <li><a href="##"><img src="images/businessvalue.png" alt=""></a></li>
-            <li><a href="##"><img src="images/ucweb.png" alt=""></a></li>
-            <li><a href="##"><img src="images/geekpark.png" alt=""></a></li>
+            <li><a title="商业价值" target="_blank" href="http://businessvalue.com.cn/"><img src="images/businessvalue.png" alt=""></a></li>
+            <li><a href="#"><img src="images/ucweb.png" alt=""></a></li>
+            <li><a title="极客公园" target="_blank" href="http://www.geekpark.net/"><img src="images/geekpark.png" alt=""></a></li>
           </ul>
           <div class="long-line icons"></div>
         </li>
         <li>
           <ul>
             <li class="title">联合发起机构</li>
-            <li><a href="##"><img src="images/qualcomm.png" alt=""></a></li>
+            <li><a href="#"><img src="images/qualcomm.png" alt=""></a></li>
           </ul>
           <div class="long-line icons"></div>
         </li>
         <li>
           <ul>
             <li class="title">智能手机支持</li>
-            <li><a href="##"><img src="images/xiaomi.png" alt=""></a></li>
+            <li><a href="#"><img src="images/xiaomi.png" alt=""></a></li>
           </ul>
           <div class="long-line icons"></div>
         </li>
         <li>
           <ul>
             <li class="title">联合发起机构</li>
-            <li><a href="##"><img src="images/sina-weibo.png" alt=""></a></li>
-            <li><a href="##"><img src="images/qqsafe.png" alt=""></a></li>
-            <li><a href="##"><img src="images/pinterest.png" alt=""></a></li>
-            <li><a href="##"><img src="images/zite.png" alt=""></a></li>
-            <li><a href="##"><img src="images/weixin.png" alt=""></a></li>
+            <li><a href="#"><img src="images/sina-weibo.png" alt=""></a></li>
+            <li><a href="#"><img src="images/qqsafe.png" alt=""></a></li>
+            <li><a href="#"><img src="images/pinterest.png" alt=""></a></li>
+            <li><a href="#"><img src="images/zite.png" alt=""></a></li>
+            <li><a href="#"><img src="images/weixin.png" alt=""></a></li>
           </ul>
         </li>
       </ul>
@@ -406,11 +416,11 @@
     <div class="copyright">Copyright © 2012  《商业价值》杂志社</div>
     <div class="location">
       <div class="location-text">
-        详细地址：北京市海淀区学院路30号 地铁 XX号线， 公交 XXXX均可到达
+        详细地址：乘坐地铁10号线在牡丹园站换乘690或848路公交车至北京科技大学北门站下车，步行至北京科技大学体育馆
         <div class="arrow-down icons"></div>
       </div>
       <div class="location-map">
-        <iframe width="1000" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://ditu.google.cn/maps?ie=UTF8&amp;q=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;fb=1&amp;hq=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;cid=0,0,16178244886018175996&amp;t=m&amp;brcurrent=3,0x35f054a0b012ef0d:0xb7b80930ef328efd,0,0x35f1abee23736947:0xd7bb8b3026d0813a%3B5,0,0&amp;ll=39.991194,116.36296&amp;spn=0.005754,0.009141&amp;z=16&amp;output=embed"></iframe><br /><small><a href="http://ditu.google.cn/maps?ie=UTF8&amp;q=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;fb=1&amp;hq=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;cid=0,0,16178244886018175996&amp;t=m&amp;brcurrent=3,0x35f054a0b012ef0d:0xb7b80930ef328efd,0,0x35f1abee23736947:0xd7bb8b3026d0813a%3B5,0,0&amp;ll=39.991194,116.36296&amp;spn=0.005754,0.009141&amp;z=16&amp;source=embed" style="color:#0000FF;text-align:left">查看大图</a></small>
+        <iframe width="1000" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://ditu.google.cn/maps?ie=UTF8&amp;q=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;fb=1&amp;hq=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;cid=0,0,16178244886018175996&amp;t=m&amp;brcurrent=3,0x35f054a0b012ef0d:0xb7b80930ef328efd,0,0x35f1abee23736947:0xd7bb8b3026d0813a%3B5,0,0&amp;ll=39.991194,116.36296&amp;spn=0.005754,0.009141&amp;z=16&amp;output=embed"></iframe><br /><small><a href="http://ditu.google.cn/maps?ie=UTF8&amp;q=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;fb=1&amp;hq=%E5%8C%97%E4%BA%AC%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E9%A6%86&amp;cid=0,0,16178244886018175996&amp;t=m&amp;brcurrent=3,0x35f054a0b012ef0d:0xb7b80930ef328efd,0,0x35f1abee23736947:0xd7bb8b3026d0813a%3B5,0,0&amp;ll=39.991194,116.36296&amp;spn=0.005754,0.009141&amp;z=16&amp;source=embed" style="color:#0000FF;text-align:left">查看大图</a></small>
       </div>
     </div>
   </footer>

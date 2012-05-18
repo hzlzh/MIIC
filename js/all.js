@@ -6,11 +6,11 @@ var $text = [
   ['好运开门','20台小米手机，100个F码看你的运气。'],
   ['极客评测','在创新展台与那些创新产品的零距离体验'],
   ['抽奖环节','参与“极客评测”领走30台最新酷的终端产品'],
-  ['title7','content7']
+  ['私密路演','精选创业项目，与VC私密面对面']
 ];
 $('.eventnav li span').each(function(index) {
   var isSequenceComplete = true;
-  $(this).mouseover(function(e) {
+  $(this).mouseenter(function(e) {
     e.preventDefault();
     if (isSequenceComplete === false) {
       return true;
@@ -21,20 +21,27 @@ $('.eventnav li span').each(function(index) {
       angle: 0,
       distance: 84,
       showAfter: 500,
-      hideAfter: 1000,
+      hideAfter: false,
       size: 200,
       onHide: function() {
         isSequenceComplete = true;
       }
     });
+  })
+  .mouseleave(function(){
+    console.log('out!');
+    $(this).grumble({hideAfter: 20});
   });
 });
 // Ajax Submit
 $("#submit_button").click(function() {
   $(this).addClass('disabled');
   var email = $('#email').val();
-  if (email == '') $('.alert').removeClass('alert-success').addClass('alert-error').html('请填写Email地址').slideUp().slideDown();
-  $.post("/register.txt", {
+  if (email == ''){
+    $('.alert').removeClass('alert-success').addClass('alert-error').html('请填写Email地址').slideUp().slideDown();
+    return;
+  }
+  $.post("/register.php", {
     "email": email
   }, function(data) {
     var dataobj = eval("(" + data + ")");
