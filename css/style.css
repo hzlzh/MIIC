@@ -17,7 +17,13 @@ a:focus{outline:none;}
 .header .top-nav .sina-weibo span{background-position:-139px -1px;display:block;height:36px;margin:22px 0;padding:0;text-indent:-9999px;width:36px;}
 .header .top-nav .sina-weibo span:hover{border-top:none;background-position:-139px -47px}
 .container{overflow:hidden;position:relative;width:100%;padding-bottom:50px;}
-.saw{background:url("images/saw.png") repeat scroll -9px -1433px transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
+.divisor-1{height:33px;background:url("images/divisor-1.png") repeat-x scroll 0 0 transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
+.divisor-2{height:40px;background:url("images/divisor-2.png") repeat-x scroll 0 0 transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
+.divisor-3{height:33px;background:url("images/divisor-3.png") repeat-x scroll 0 0 transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
+.divisor-4{height:45px;background:url("images/divisor-4.png") repeat-x scroll 0 0 transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
+
+
+
 .index .slideshow{width:100%;height:400px;padding-top:79px;}
 .index .slideshow .header_img{width:1000px;margin:0 auto;}
 .index .container_12{margin:0 auto;width:1100px;}
