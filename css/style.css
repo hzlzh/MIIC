@@ -20,7 +20,7 @@ a:focus{outline:none;}
 .saw{background:url("images/saw.png") repeat scroll -9px -1433px transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
 .index .slideshow{width:100%;height:400px;padding-top:79px;}
 .index .slideshow .header_img{width:1000px;margin:0 auto;}
-.index .container_12{margin:0 auto;width:1050px;}
+.index .container_12{margin:0 auto;width:1100px;}
 .index .slider{height:400px;position:relative;width:100%;}
 .index #header_images{height:0;left:50%;margin:0 auto 0 -525px;overflow:hidden;position:absolute;width:1050px;}
 .index .header_image{margin:0 auto;opacity:0;position:absolute;}
@@ -62,7 +62,7 @@ a:focus{outline:none;}
 .sidebar .tips-btn{background-position:1px -672px;height:82px;width:305px;}
 .sidebar .app-store-btn{background-position:1px -420px;height:81px;width:305px;}
 .sidebar .google-play-btn{background-position:1px -511px;height:81px;width:305px;}
-.sidebar .sina-weibo-btn{background-position:1px -603px;height:65px;width:305px;position: relative;text-indent: 0;}
+.sidebar .sina-weibo-btn{background-position: 1px -600px;height: 68px;position: relative;text-indent: 0;width: 305px;}
 .sidebar .widget-contact li{font-size:15px;line-height:19px;margin:5px 0;}
 .sidebar .widget .widget-title{color:#414141;font-size:24px;line-height:24px;margin:31px 0 25px 5px;}
 .sidebar .widget .contact-type{color:#414141;font-size:18px;line-height:18px;margin-bottom:14px;}
@@ -82,7 +82,7 @@ a:focus{outline:none;}
 .guest-profile .guest-profile-box{width:1000px;margin:0 auto 6px;overflow:hidden;}
 .guest-profile h3{font-size:32px;line-height:32px;}
 .guest-profile ul{list-style:none outside none;margin-left:0;margin-top:35px;overflow:hidden;}
-.guest-profile ul li{height:450px;float:left;width:25%;}
+.guest-profile ul li{height:330px;float:left;width:25%;}
 .guest-profile ul li ul{margin:0;overflow:hidden;}
 .guest-profile ul li ul li{height:100%;margin:0 0 14px;width:100%;}
 .guest-profile .avatar img{}
@@ -98,7 +98,7 @@ a:focus{outline:none;}
 .cooperativ-partner ul li ul li{display:inline-block;margin:0 60px 0 0;vertical-align:middle;}
 .cooperativ-partner .title{font-size:16px;line-height:16px;margin-right:0;width:230px;}
 .cooperativ-partner img{}
-.cooperativ-partner .long-line{background-position:-296px -769px;display:block;height:3px;width:1000px;}
+.cooperativ-partner .long-line{background-position:-296px -795px;display:block;height:3px;width:1000px;}
 .join-in{background:url(images/body_bg4.png) repeat scroll 0 0 #eeeeee;color:#000;padding-top:110px;}
 .join-in a{color:#000;}
 .join-in .join-in-box{width:960px;margin:0 auto 6px;overflow:hidden;padding:0 20px;}

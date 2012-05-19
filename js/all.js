@@ -42,6 +42,7 @@ $("#submit_button").click(function() {
   var email = $('#email').val();
   if (email == ''){
     $('.alert').removeClass('alert-success').addClass('alert-error').html('请填写Email地址').slideUp().slideDown();
+    $("#submit_button").removeClass('disabled');
     return;
   }
   $.post("/register.php", {
@@ -50,6 +51,7 @@ $("#submit_button").click(function() {
     var dataobj = eval("(" + data + ")");
     if (dataobj.success) {
       $('.alert').removeClass('alert-error').addClass('alert-success').html(dataobj.msg).slideUp().slideDown();
+      $('#email').val('');
     } else {
       $('.alert').removeClass('alert-success').addClass('alert-error').html(dataobj.msg).slideUp().slideDown();
     }
