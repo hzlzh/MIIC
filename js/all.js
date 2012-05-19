@@ -185,6 +185,7 @@ function load_animations() {
   }
 
   function animate_header(direction, project) {
+    $('.slider').removeClass('loading');
     if (!$.browser.msie) {
       $('#header_images > .header_image:nth-child(' + current_project + ')').stop().animate({
         opacity: '0',
