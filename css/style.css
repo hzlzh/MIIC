@@ -6,7 +6,9 @@ a:focus{outline:none;}
 .icons,.cs-button-coin-slider{background-image:url(images/sprites.png);background-repeat:no-repeat;}
 .header{position:fixed;z-index:9999;width:100%;background:url(images/top_nav_bg.png) repeat-x scroll 0 0 transparent}
 .header .header-container{max-width:1049px;height:90px;overflow:hidden;margin:0 auto}
-.header .logo a{background-position:11px 2px;display:block;height:71px;text-indent:-9999px;width:119px;}
+.header .logo a,.map-logo{background-position:11px 2px;display:block;height:71px;text-indent:-9999px;width:119px;}
+.map-logo{width: 103px;background-color: #000000;float: left;margin-right: 20px;}
+.iw_poi_content{margin-top: 10px;overflow: hidden;}
 .header .logo,.event .nav li{float:left;margin:0 9px;}
 .header .top-nav{float:right}
 .header .top-nav ul{overflow:hidden;margin:0}
@@ -21,9 +23,6 @@ a:focus{outline:none;}
 .divisor-2{height:40px;background:url("images/divisor-2.png") repeat-x scroll 0 0 transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
 .divisor-3{height:33px;background:url("images/divisor-3.png") repeat-x scroll 0 0 transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
 .divisor-4{height:45px;background:url("images/divisor-4.png") repeat-x scroll 0 0 transparent;display: block;height: 42px;position: absolute;top: 0;width: 100%;}
-
-
-
 .index .slideshow{width:100%;height:400px;padding-top:79px;background-color: #033153;}
 .index .slideshow .header_img{width:1000px;margin:0 auto;}
 .index .container_12{margin:0 auto;width:1100px;}
@@ -128,10 +127,9 @@ a:focus{outline:none;}
 .footer .copyright{color:#888888;font-size:14px;line-height:14px;text-align:center;text-shadow:1px 1px 1px #FFFFFF;}
 .footer .location{margin-top:15px;}
 .footer .location .location-text{position:relative ;background:none repeat scroll 0 0 #2F2F2F;color:#FFFFFF;font-size:17px;line-height:30px;text-align:center;}
-.footer .location .location-text .arrow-down{background-position:-236px -33px;bottom:-31px;height:31px;left:0;margin:0 auto;position:absolute;right:0;width:62px;}
+.footer .location .location-text .arrow-down{z-index:999; background-position:-236px -33px;bottom:-31px;height:31px;left:0;margin:0 auto;position:absolute;right:0;width:62px;}
 .footer .location .location-map{position:relative;}
-.footer .location .location-map iframe{width:100%;}
-.footer .location .location-map small{bottom:0;position:absolute;}
+
 /* Grumble jQueryPlugin Css Style */
 .grumble{position:absolute;background-image:url(images/bubble-sprite.png);background-repeat:no-repeat;z-index:99999}
 .grumble-text{position:absolute;text-align:center;z-index:99999;display:table;overflow:hidden;text-transform:uppercase;font-size:14px;line-height:14px}
