@@ -130,6 +130,16 @@ a:focus{outline:none;}
 .footer .location .location-text .arrow-down{z-index:999; background-position:-236px -33px;bottom:-31px;height:31px;left:0;margin:0 auto;position:absolute;right:0;width:62px;}
 .footer .location .location-map{position:relative;}
 
+@media (max-width: 1000px) {
+	.header .top-nav {padding: 0 15% 0 0;}
+    .index .content .sidebar {padding-right: 3%;width: 32%;}
+    .index .content .main-area {padding-left: 3%;width: 60%;}
+    .cooperative-partner .cooperative-partner-box,.guest-profile .guest-profile-box,.join-in .join-in-box{padding-left: 3%;
+    width: 94%;padding-right: 3%;}
+    .guest-profile ul li{padding-right: 1%;width: 24%;}
+    .guest-profile .avatar img {max-width: 100%;height: auto;}
+}
+
 /* Grumble jQueryPlugin Css Style */
 .grumble{position:absolute;background-image:url(images/bubble-sprite.png);background-repeat:no-repeat;z-index:99999}
 .grumble-text{position:absolute;text-align:center;z-index:99999;display:table;overflow:hidden;text-transform:uppercase;font-size:14px;line-height:14px}
