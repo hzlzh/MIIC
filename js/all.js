@@ -5,13 +5,14 @@ jQuery(function() {
       var $target = jQuery(this.hash);
       var $url = this.hash.slice(1);
       var $scrollTime = 500;
+      function updateUrl(){ window.location.hash = encodeURIComponent($url); }
       $target = $target.length && $target || jQuery('[name=' + $url + ']');
       if ($target.length) {
         var targetOffset = $target.offset().top;
         jQuery('html,body').animate({
           scrollTop: targetOffset
         }, $scrollTime);
-        setTimeout("window.location.hash = encodeURIComponent('"+url+"');",$scrollTime+100)
+        setTimeout(updateUrl,$scrollTime+100)
         return false;
       }
     }
@@ -215,12 +216,12 @@ function load_animations() {
 
 // ToolTip
 var $text = [
-  ['邀约嘉宾','讲干货的嘉宾不说虚的，会议全程内容优质紧凑无“尿点”'],
-  ['全互动','全程互动与视频直播，商业价值APP支持的在线交互'],
-  ['会议主题','HTLM5，语音技术、移动社交、用户体验等最热点的趋势workshop'],
-  ['好运开门','20台小米手机，100个F码看你的运气。'],
+  ['明星嘉宾','讲干货的嘉宾不说虚的，会议全程内容优质紧凑无“尿点”'],
+  ['热门主题','HTLM5，语音技术、移动社交、用户体验等最热点的趋势workshop'],
   ['极客评测','在创新展台与那些创新产品的零距离体验'],
-  ['抽奖环节','参与“极客评测”领走30台最新最酷的终端产品'],
+  ['全互动','全程互动与视频直播，商业价值APP支持的在线交互。'],
+  ['评测即送','参与“极客评测”领走30台最新酷的终端产品。'],
+  ['疯狂派送','20台小米手机，100个F码看你的运气。'],
   ['私密路演','精选创业项目，与VC私密面对面']
 ];
 $('.eventnav li span').each(function(index) {
