@@ -51,11 +51,11 @@
         <div class="container_12">
           <div class="slider loading">
             <div id="header_images">
-              <img src="css/images/banner-1.jpg" class="header_image" color=  "#033153" alt="" link="" target="_self">
-              <img src="css/images/banner-2.jpg" class="header_image" color=  "#93bf00" alt="" link="" target="_self">
-              <img src="css/images/banner-3.jpg" class="header_image" color=  "#f9d406" alt="" link="#join-in" target="_self">
-              <img src="css/images/banner-4.jpg" class="header_image" color=  "#e74f00" alt="" link="#guest-profile" target="_self">
-              <img src="css/images/banner-5.jpg" class="header_image" color=  "#ffffff" alt="" link="#join-in" target="_self">
+              <img src="css/images/banner-1.jpg" class="header_image" color="#033153" alt="" link="#join-in" target="_self">
+              <img src="css/images/banner-2.jpg" class="header_image" color="#93bf00" alt="" link="" target="_self">
+              <img src="css/images/banner-3.jpg" class="header_image" color="#f9d406" alt="" link="#join-in" target="_self">
+              <img src="css/images/banner-4.jpg" class="header_image" color="#e74f00" alt="" link="#guest-profile" target="_self">
+              <img src="css/images/banner-5.jpg" class="header_image" color="#ffffff" alt="" link="#join-in" target="_self">
             </div>
             <div class="header_controls">
               <a href="#" class="icons" id="header_controls_left">Previous</a>
@@ -91,14 +91,14 @@
           <ul class="event-content icons">
             <li class="current">7月6日下午
               <ul>
-                <li class="f">移动互联网创新大会分论坛（ABC）</li>
+                <li class="f">移动互联开发者日</li>
               </ul>
             </li>
             <li>
               <ul>
-                <li>分论坛一：移动社交：正在爆发的细分领域机会</li>
-                <li>分论坛二：挖掘移动游戏金矿</li>
-                <li>分论坛三：HTML5引发的Web反击战</li>
+                <li>极客公园活动</li>
+                <li>合作伙伴专场</li>
+                <li></li>
               </ul>
             </li>
             <li>7月7日上午
@@ -166,7 +166,8 @@
       <ul>
         <li>
           <ul>
-            <li>日程即将更新...</li>
+            <li><span class="time">13 : 30 ~ 17 : 30</span><span class="subject">极客公园活动</span></li>
+            <li><span class="time">&nbsp;</span><span class="subject">合作伙伴专场</span></li>
           </ul>
         </li>
       </ul>
@@ -404,7 +405,7 @@
     <div class="copyright">Copyright © 2012  《商业价值》杂志社</div>
     <div class="location">
       <div class="location-text">
-        详细地址：乘坐地铁10号线在牡丹园站换乘690或848路公交车至北京科技大学北门站下车，步行至北京科技大学体育馆
+        &nbsp;
         <div class="arrow-down icons"></div>
       </div>
       <div class="location-map">
@@ -429,8 +430,8 @@
     //创建地图函数：
     function createMap(){
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(116.368711,39.996177);//定义一个中心点坐标
-        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        var point = new BMap.Point(116.407211,39.908977);//定义一个中心点坐标
+        map.centerAndZoom(point,10);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
     }
     
@@ -456,7 +457,7 @@
     }
     
     //标注点数组
-    var markerArr = [{title:"MIIC-移动互联网创新大会",content:"<h4>北京科技大学体育馆</h4><strong>详细地址：</strong>乘坐地铁10号线在牡丹园站换乘690或848路公交车至北京科技大学北门站下车，步行至北京科技大学体育馆。",point:"116.368585|39.996245",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{title:"MIIC-移动互联网创新大会",content:"<h4>地点待定</h4><strong>详细地址：</strong>请等待更新。",point:"116.407211|39.908977",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
      ];
     //创建marker
     function addMarker(){
