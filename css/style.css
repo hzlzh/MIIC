@@ -56,6 +56,8 @@ a:focus{outline:none;}
 .index .content .main-area .event-content li{color:#414141;font-size:16px;line-height:16px;margin-bottom:31px;font-weight:bolder;}
 .index .content .main-area .event-content li ul{list-style:none outside none;margin-left:129px;margin-top:-15px;}
 .index .content .main-area .event-content li ul li{color:#404040;margin-bottom:23px;font-weight:normal;}
+.index .content .main-area .event-content li ul li.child{color: #999999;font-size: 13px;line-height: 18px;margin-top: -18px;}
+.index .content .main-area .event-content li ul li.child a{color:#00ACFF}
 .index .content .main-area .event-content .f{color:#414141;font-weight:bolder;}
 .index .content .main-area .event-content .current{color:#00ACFF;font-weight:bolder;}
 .index .content .main-area .event-content .current .f{color:#00ACFF;}
@@ -139,6 +141,8 @@ a:focus{outline:none;}
     .guest-profile ul li{padding-right: 1%;width: 24%;}
     .guest-profile .avatar img {max-width: 100%;height: auto;}
 }
+
+
 
 /* Grumble jQueryPlugin Css Style */
 .grumble{position:absolute;background-image:url(images/bubble-sprite.png);background-repeat:no-repeat;z-index:99999}
