@@ -221,7 +221,7 @@ var $text = [
   ['公开课','面向开发者最实用、最涨血的免费课程'],
   ['全互动','全程互动与视频直播，商业价值APP支持的在线交互。'],
   ['评测即送','参与“极客评测”领走30台最新酷的终端产品。'],
-  ['疯狂派送','20台小米手机，100个F码看你的运气。'],
+  ['疯狂派送','20台小米手机，100个F码，更有200套全年《商业价值》等你赢。'],
   ['迷你路演','精选创业项目，与VC和产品大牛面对面']
 ];
 $('.eventnav li span').each(function(index) {
@@ -253,25 +253,59 @@ $('.eventnav li span').each(function(index) {
 });
 
 
+
+
 // Ajax Submit
 $("#submit_button").click(function() {
   $(this).addClass('disabled');
-  var email = $('#email').val();
-  if (email == ''){
-    $('.alert').removeClass('alert-success').addClass('alert-error').html('请填写Email地址').slideUp().slideDown();
+  var name = $('#name').val();
+      mobile = $('#mobile').val();
+      email = $('#email').val();
+      company = $('#company').val();
+      title = $('#title').val();
+
+      function isEmail(strEmail) {
+        if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) return true;
+        else return false;
+      }
+      function isMobile(strMobile) {
+        if (strMobile.search(/^[0-9]{11}$/) != -1) return true;
+        else return false;
+      }
+  if(name == '' || mobile == '' || email == '' || company == '' || title == ''){
+    $('.alert').removeClass('alert-success').addClass('alert-error').html('请将带*号的必填项目填写完整').slideUp().slideDown();
     $("#submit_button").removeClass('disabled');
     return;
   }
+    if (isEmail(email) ==  false){
+    $('.alert').removeClass('alert-success').addClass('alert-error').html('请填写正确的Email地址').slideUp().slideDown();
+    $("#submit_button").removeClass('disabled');
+    return;
+  }
+
+    if (isMobile(mobile) ==  false){
+    $('.alert').removeClass('alert-success').addClass('alert-error').html('请填写正确的手机号码').slideUp().slideDown();
+    $("#submit_button").removeClass('disabled');
+    return;
+  }
+  $(".submit img").show();
   $.post("/register.php", {
-    "email": email
+    "name": name,
+    "mobile": mobile,
+    "email": email,
+    "company": company,
+    "title": title
   }, function(data) {
     var dataobj = eval("(" + data + ")");
-    if (dataobj.success) {
-      $('.alert').removeClass('alert-error').addClass('alert-success').html(dataobj.msg).slideUp().slideDown();
-      $('#email').val('');
+    if (!dataobj.hasOwnProperty('error')) {
+      $('.alert').removeClass('alert-error').addClass('alert-success').html(dataobj['info']).slideUp().slideDown();
+      $('#name,#mobile,#email,#company,#title').val('');
     } else {
-      $('.alert').removeClass('alert-success').addClass('alert-error').html(dataobj.msg).slideUp().slideDown();
+      $('.alert').removeClass('alert-success').addClass('alert-error').html('您已使用该邮箱进行过报名').slideUp().slideDown();
     }
   })
-  .complete(function() { $("#submit_button").removeClass('disabled'); });
+  .complete(function(){ 
+    $("#submit_button").removeClass('disabled');
+    $(".submit img").fadeOut();
+  });
 });
