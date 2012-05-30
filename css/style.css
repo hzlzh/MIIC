@@ -96,7 +96,7 @@ a:focus{outline:none;}
 .meeting-agenda .agenda-box .time{width:160px;float:left;}
 .meeting-agenda .agenda-box .subject{float:left;width:430px;}
 .meeting-agenda .agenda-box .title{font-size:13px;color: #a0a0a0;margin-left: 20px;}
-.meeting-agenda .agenda-box .name{font-size:16px;color: #3399ff;margin-left: 5px;}
+.meeting-agenda .agenda-box .name{font-size:13px;color: #3399ff;margin-left: 10px;}
 .guest-profile{background:url(images/body_bg2.png) repeat scroll 0 0 #eff0f4;color:#000;padding-top:110px;}
 .guest-profile .guest-profile-box{width:1000px;margin:0 auto 6px;overflow:hidden;}
 .guest-profile h3{font-size:32px;line-height:32px;}
