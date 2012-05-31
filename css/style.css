@@ -108,6 +108,7 @@ a:focus{outline:none;}
 .guest-profile .name{font-weight:bolder;font-size:22px;line-height:22px;}
 .guest-profile .title{font-size:16px;font-weight:bolder;line-height:16px;}
 .guest-profile .bio{font-size:16px;line-height:20px;color:#767676;width:85%;}
+.guest-profile .more{color:#666;margin-top: 91px; font-size: 20px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-radius: 10px 10px 10px 10px; padding: 15px; width: 210px;line-height: 23px;}
 .cooperative-partner{background:url(images/body_bg3.png) repeat scroll 0 0 #393c42;color:#fff;padding-top:110px;}
 .cooperative-partner .cooperative-partner-box{width:1000px;margin:0 auto 6px;overflow:hidden;}
 .cooperative-partner h3{font-size:30px;line-height:30px;}
@@ -140,6 +141,8 @@ a:focus{outline:none;}
 .join-in .box-r .item i{color:#bebebe;margin-left: 5px;vertical-align: middle;}
 .join-in .box-r .submit{margin: 0 auto;position: relative;width: 130px;}
 .join-in .box-r .submit img{display: none;position: absolute;right: 0;top: 10px;}
+.join-in .box-r .tips{margin-top: 10px;}
+.join-in .box-r .tips a{color: #3399FF;}
 .footer{background:url(images/body_bg4.png) repeat scroll 0 0 #eeeeee;color:#000;padding-top:30px;}
 .footer .copyright{color:#888888;font-size:14px;line-height:14px;text-align:center;text-shadow:1px 1px 1px #FFFFFF;}
 .footer .location{margin-top:15px;}
