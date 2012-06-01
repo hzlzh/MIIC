@@ -217,7 +217,7 @@ function load_animations() {
 // ToolTip
 var $text = [
   ['明星嘉宾','讲干货的嘉宾不说虚的，会议全程内容优质紧凑无“尿点”'],
-  ['热门主题','HTLM5，语音技术、移动社交、用户体验等最热点的趋势探讨'],
+  ['热门主题','HTLM5、语音技术、移动社交、用户体验等热点趋势探讨'],
   ['公开课','面向开发者最实用、最涨血的免费课程'],
   ['全互动','全程互动与视频直播，商业价值APP支持的在线交互'],
   ['评测即送','参与“极客评测”领走30台最新、最酷的终端产品'],
@@ -289,19 +289,22 @@ $("#submit_button").click(function() {
     return;
   }
   $(".submit img").show();
-  $.post("/register.php", {
+  $.getJSON("http://mimas.businessvalue.com.cn/api?api_key=098f6bcd4621d373cade4e832627b4f6&api_sig=51629988468cd89fdb81a24765a3bb07&method=user.register&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?", {
     "name": name,
     "mobile": mobile,
     "email": email,
     "company": company,
     "title": title
   }, function(data) {
-    var dataobj = eval("(" + data + ")");
-    if (!dataobj.hasOwnProperty('error')) {
-      $('.alert').removeClass('alert-error').addClass('alert-success').html(dataobj['info']).slideUp().slideDown();
+    console.log('test')
+    if (!data['error']) {
+      $('.alert').removeClass('alert-error').addClass('alert-success').html(data['info']).slideUp().slideDown();
       $('#name,#mobile,#email,#company,#title').val('');
     } else {
-      $('.alert').removeClass('alert-success').addClass('alert-error').html('您已使用该邮箱进行过报名').slideUp().slideDown();
+      if(data['error_code'] == 10103)
+        $('.alert').removeClass('alert-success').addClass('alert-error').html('您已使用该邮箱进行过报名').slideUp().slideDown();
+      else
+        $('.alert').removeClass('alert-success').addClass('alert-error').html('提交失败').slideUp().slideDown();
     }
   })
   .complete(function(){ 
