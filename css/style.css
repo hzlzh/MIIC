@@ -67,7 +67,7 @@ a:focus{outline:none;}
 .sidebar ul span{text-indent:-9999px;display:block;margin-top:10px;}
 .sidebar .join-btn{background-position:1px -239px;height:78px;width:301px;}
 .sidebar .join-btn:hover{background-position:1px -331px;text-indent:-9999px;}
-.sidebar .tips-btn{background-position:1px -672px;height:82px;width:305px;}
+.sidebar .tips-btn{background-position:1px -672px;height:102px;width:305px;}
 .sidebar .app-store-btn{background-position:1px -420px;height:81px;width:305px;}
 .sidebar .google-play-btn{background-position:1px -511px;height:81px;width:305px;}
 .sidebar .sina-weibo-btn{background-position: 1px -600px;height: 68px;position: relative;text-indent: 0;width: 305px;}
@@ -84,19 +84,14 @@ a:focus{outline:none;}
 .meeting-agenda .agenda-box ul{margin:20px 0 40px;}
 .meeting-agenda .agenda-box ul li{font-weight:bolder;font-size:20px;line-height:20px;list-style:none outside none;}
 .meeting-agenda .agenda-box ul li ul li{color:#686868;font-weight:normal;font-size:16px;line-height:20px;overflow:hidden;margin:8px 0;position:relative;}
-.meeting-agenda .agenda-box ul li ul li.child {
-    color: #999999;
-    font-size: 13px;
-    line-height: 16px;
-    margin-left: 160px;
-}
-.meeting-agenda .agenda-box ul li ul li.child a {
-    color: #00ACFF;
-}
+.meeting-agenda .agenda-box ul li ul li.child {color: #999999;font-size: 13px;line-height: 16px;margin-left: 160px;}
+.meeting-agenda .agenda-box ul li ul li.child a {color: #00ACFF;}
 .meeting-agenda .agenda-box .time{width:160px;float:left;}
 .meeting-agenda .agenda-box .subject{float:left;width:430px;}
 .meeting-agenda .agenda-box .title{font-size:13px;color: #a0a0a0;margin-left: 20px;}
 .meeting-agenda .agenda-box .name{font-size:13px;color: #3399ff;margin-left: 10px;}
+.meeting-agenda .agenda-box .event-tip{border: 3px solid #DDDDDD;border-radius: 5px 5px 5px 5px;display: inline-block;font-size: 19px;line-height: 26px;margin-bottom: 30px;margin-left: -306px;padding: 20px 80px;text-align: center;width: 690px;}
+.meeting-agenda .agenda-box .event-tip strong{color: #EF3261;padding: 0 5px;}
 .guest-profile{background:url(images/body_bg2.png) repeat scroll 0 0 #eff0f4;color:#000;padding-top:110px;}
 .guest-profile .guest-profile-box{width:1000px;margin:0 auto 6px;overflow:hidden;}
 .guest-profile h3{font-size:32px;line-height:32px;}
@@ -115,7 +110,7 @@ a:focus{outline:none;}
 .cooperative-partner ul{list-style:none outside none;margin:35px 0;vertical-align:middle;}
 .cooperative-partner ul li{}
 .cooperative-partner ul li ul{overflow:hidden;41px 0}
-.cooperative-partner ul li ul li{display:inline-block;margin:0 50px 0 0;vertical-align:middle;}
+.cooperative-partner ul li ul li{display:inline-block;margin:0 30px 0 0;vertical-align:middle;}
 .cooperative-partner .title{font-size:16px;line-height:16px;margin-right:0;width:230px;}
 .cooperative-partner img{}
 .cooperative-partner .long-line{background-position:-296px -795px;display:block;height:3px;width:1000px;}
@@ -159,8 +154,6 @@ a:focus{outline:none;}
     .guest-profile ul li{padding-right: 1%;width: 24%;}
     .guest-profile .avatar img {max-width: 100%;height: auto;}
 }
-
-
 
 /* Grumble jQueryPlugin Css Style */
 .grumble{position:absolute;background-image:url(images/bubble-sprite.png);background-repeat:no-repeat;z-index:99999}
