@@ -312,3 +312,71 @@ $("#submit_button").click(function() {
     $(".submit img").fadeOut();
   });
 });
+
+//日程列表 动态载入
+function agendaLoading(boxClass){
+    var $agenda = $(boxClass);
+    var getLocalTime = function(Unixtimestamp){
+        var unixTimestamp = new Date(Unixtimestamp * 1000),
+            commonTime    = unixTimestamp,
+            month         = commonTime.getMonth(),
+            day           = commonTime.getDate(),
+            hours         = commonTime.getHours()*1 >= 10 ? commonTime.getHours() : "0"+commonTime.getHours(),
+            minutes       = commonTime.getMinutes()*1 >= 10 ? commonTime.getMinutes() : "0"+commonTime.getMinutes();
+        return {
+            month  :month,
+            day    :day,
+            hours  :hours,
+            minutes:minutes
+        }
+        
+    }    
+    var agenda_list = function(time,content,author,descript){
+        if(!author){
+            return '<li><span class="time">'+time+'</span><span class="subject">'+content+'</span></li>';
+        }else{
+            return '<li><span class="time">'+time+'</span><span class="subject">'+content+'<span class="title">'+descript+'</span><span class="name">'+author+'</span></span></li>';
+        }
+    };
+    var child_list  = function(detail,author,sign){
+            return '<li class="child" style="margin-left:160px;">'+sign+" : "+detail+'<span class="name">'+author+'</span></li>';
+    };
+    var each_agenda = function(json){
+        var str = "<li>"+json.title+"<ul>";
+        $.each(json.agendas,function(j,jtem){
+            var bDate = getLocalTime(jtem.time_started),
+                eDate = getLocalTime(jtem.time_ended),
+                btime = bDate.hours+" : "+bDate.minutes,
+                etime = eDate.hours+" : "+eDate.minutes;
+            str += agenda_list(btime+" ~ "+etime,jtem.title);
+            if(jtem.guests){
+                $.each(jtem.guests,function(k,ktem){
+                    var tit = ktem.title;
+                    if(tit == '主持人'){
+                        tit += "　";
+                    }
+                    str += child_list(ktem.position,ktem.name,tit);
+                });
+            };
+        });
+        return str;
+    };
+    
+    $.getJSON("http://mimas.businessvalue.com.cn/api?api_key=098f6bcd4621d373cade4e832627b4f6&api_sig=8af5f06d5a4c48fa826c015bebef03df&method=agenda.list&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?",function(result){
+        var list_one = "",list_next_one = "",same_day;
+        $.each(result,function(i,item){
+            var day = 6;
+            if(day != getLocalTime(item.time_ended).day){
+                list_next_one += each_agenda(item);
+            }else{
+                list_one += each_agenda(item);
+            }
+            list_one      += "</ul></li>";        
+            list_next_one += "</ul></li>";        
+        });
+        $agenda.eq(0).html(list_one);
+        
+        $agenda.eq(1).html(list_next_one);
+    });
+}
+agendaLoading("#meeting-agenda .agenda-box .agenda-box-list");
