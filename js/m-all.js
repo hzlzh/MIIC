@@ -54,7 +54,7 @@ $("#submit_button").click(function() {
     return;
   }
   $(".submit img").show();
-  $.getJSON("http://mimas.businessvalue.com.cn/api?api_key=098f6bcd4621d373cade4e832627b4f6&api_sig=51629988468cd89fdb81a24765a3bb07&method=user.register&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?", {
+  $.getJSON("http://mimas.businessvalue.com.cn/api?api_key=84021e748610b3ab89b11695a73c3c31&api_sig=ecbf9d86cd57f048bf8450e85e6d91fd&method=user.register&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?", {
     "name": name,
     "mobile": mobile,
     "email": email,
