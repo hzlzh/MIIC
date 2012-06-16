@@ -18,10 +18,33 @@ color-stop(0.38,#E5E9EB),
 color-stop(0.64,#FFFFFF)
 );border-bottom:medium none;border-top:1px solid #F1F1F1;color:#333333;font-size:20px;height:40px;line-height:40px;}
 .b-bottom{overflow:hidden;padding-bottom:5px;}
-.b-bottom .more{display:block;margin:0 auto;}
+.b-bottom a:hover{text-decoration:none;}
+.b-bottom .more{display:block;margin:0 auto;width:138px;}
 .b-bottom .submit{margin:0 auto!important;display:block;}
-.b-bottom .back{float:left;margin-left:20%;}
-.b-bottom .join{float:right;margin-right:20%;}
+.b-bottom .back{float:left;margin-left:20%;
+border:1px solid #cecece;
+background:-moz-linear-gradient(center bottom,#c6cdd2 20%,#dfe6ea 58%) repeat scroll 0 0 transparent;background:-webkit-gradient(
+linear,
+left bottom,
+left top,
+color-stop(0.2,#c6cdd2),
+color-stop(0.58,#dfe6ea)
+);border-radius:5px 5px 5px 5px;
+
+
+}
+.b-bottom .join{float:right;margin-right:20%;
+border:1px solid #dfe6ea;
+background:-moz-linear-gradient(center bottom,#f16222 20%,#fb972c 58%) repeat scroll 0 0 transparent;background:-webkit-gradient(
+linear,
+left bottom,
+left top,
+color-stop(0.2,#f16222),
+color-stop(0.58,#fb972c)
+);border-radius:5px 5px 5px 5px;
+
+
+}
 .button{display:block;background:-moz-linear-gradient(center bottom,#73A748 20%,#97C87E 58%) repeat scroll 0 0 transparent;background:-webkit-gradient(
 linear,
 left bottom,
@@ -32,7 +55,7 @@ color-stop(0.58,rgb(151,200,126))
 .content article{border-top:1px solid #D5D5D5;margin-bottom:10px;}
 .m-feature ul{margin-left:10px;}
 .m-feature ul li{border-bottom:1px solid #E6E6E6;overflow:hidden;padding:5px 0 7px;}
-.m-feature ul li i.icons{margin-right:25px;display:block;float:left;height:61px;width:61px;}
+.m-feature ul li i.icons{margin-right:1%;display:block;float:left;height:61px;width:61px;}
 .icons{background-image:url(images/m-script.png);background-repeat:no-repeat;}
 .m-feature .item1{background-position:0 0}
 .m-feature .item2{background-position:0 -77px;}
@@ -42,7 +65,7 @@ color-stop(0.58,rgb(151,200,126))
 .m-feature .item6{background-position:0 -376px;}
 .m-feature .item7{background-position:0 -454px;}
 .m-feature h3{font-size:17px;}
-.m-feature .des{color:#666666;height:12px;line-height:16px;}
+.m-feature .des{color:#666666;height:12px;line-height:16px;padding-right: 1%;}
 .event-time{padding-top:20px;}
 .event-time .event-content{margin-left:10px;background-position:-69px -626px;padding-left:30px;}
 .event-time .event-content li{margin-bottom:7px;}

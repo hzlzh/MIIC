@@ -313,6 +313,10 @@ $("#submit_button").click(function() {
   });
 });
 
+//api地址
+
+var API_URL = "http://mimas.businessvalue.com.cn/api";
+
 //日程列表 动态载入
 function agendaLoading(boxClass){
     var $agenda = $(boxClass);
@@ -362,7 +366,7 @@ function agendaLoading(boxClass){
         return str;
     };
     
-    $.getJSON("http://mimas.businessvalue.com.cn/api?api_key=098f6bcd4621d373cade4e832627b4f6&api_sig=8af5f06d5a4c48fa826c015bebef03df&method=agenda.list&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?",function(result){
+    $.getJSON(API_URL+"?api_key=098f6bcd4621d373cade4e832627b4f6&api_sig=8af5f06d5a4c48fa826c015bebef03df&method=agenda.list&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?",function(result){
         var list_one = "",list_next_one = "",same_day;
         $.each(result,function(i,item){
             var day = 6;
@@ -380,3 +384,87 @@ function agendaLoading(boxClass){
     });
 }
 agendaLoading("#meeting-agenda .agenda-box .agenda-box-list");
+
+//嘉宾动态载入
+function guestLoading(list){
+    var $list = $(list);
+    var guest_html = function(src,title,position,company,w,h){
+        return  '<li>'
+               +'   <ul>'
+               +'     <li class="avatar"><img alt="'+title+'" src="'+src+'" width="'+w+'" height="'+h+'"></li>'
+               +'     <li class="name">'+title+'</li>'
+               +'     <li class="title">'+company+position+'</li>'
+               +'   </ul>'
+               +'</li>';
+    }
+    var url = API_URL+"?api_key=d7d1fe3f36fdb557f56ef72922a556b0&api_sig=ebac318d6defaec8e8013a5942933711&method=event.guest&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu";
+    $.getJSON(url+"&jsoncallback=?",function(result){
+        var guests = "";
+        $.each(result,function(i,item){
+            if(typeof item.name !== "undefined"){
+               guests += guest_html(item.relative_path,item.name,item.title,item.company,item.width,item.height);
+            }
+        });
+        guests += '<li><ul><li class="more">更有超过30位演讲嘉宾超过20场产品宣讲</li></ul></li>'
+        $list.html(guests);
+    })
+   
+}
+guestLoading(".guest-profile-box-list");
+
+//合作伙伴动态载入
+function cooperativeLoading(list){
+    var $list = $(list);
+    var cooperativeLoading_html = function(arr,result){
+        var content = '';
+        var li_list = function(item){
+            return '<li><a title="'+item.title+'" target="_blank" href="'+item.url+'"><img src="'+item.relative_path+'" alt="'+item.title+'"></a></li>'
+        }
+        $.each(result,function(i,item){
+            if(item.data == arr){
+                content += li_list(item);
+            }
+        })
+        return   ' <li> '
+                +'  <ul> '
+                +'    <li class="title">'+arr+'</li> '
+                +     content
+                +'  </ul> '
+                +'  <div class="long-line icons"></div> '
+                +' </li>';
+    }
+    var url = API_URL+"?api_key=d7d1fe3f36fdb557f56ef72922a556b0&api_sig=4b094f53019d915061653161fd89c80d&method=event.partner&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu";
+    $.getJSON(url+"&jsoncallback=?",function(result){
+        var cooperative = "",arr = [];
+        $.each(result,function(i,item){
+            arr[i] = item.data;
+        });
+        Array.prototype.uniq = function() {  
+            var temp = {}, len = this.length;
+    
+            for(var i=0; i < len; i++)  {  
+                if(typeof temp[this[i]] == "undefined") {
+                    temp[this[i]] = 1;
+                }  
+            }  
+            this.length = 0;
+            len = 0;
+            for(var i in temp) {  
+                this[len++] = i;
+            }  
+            return this;  
+        }  
+        arr.uniq();
+        for(var j=0;j<arr.length;j++){
+            cooperative += cooperativeLoading_html(arr[j],result);
+        }
+        $list.html(cooperative);
+    })
+    
+}
+cooperativeLoading(".cooperative-partner-box-list");
+
+
+
+
+

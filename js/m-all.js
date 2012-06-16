@@ -28,6 +28,7 @@ $("#submit_button").click(function() {
       email = $('#email').val();
       company = $('#company').val();
       title = $('#title').val();
+      share_btn = $('.share-btn iframe').clone();
 
       function isEmail(strEmail) {
         if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1) return true;
@@ -38,7 +39,7 @@ $("#submit_button").click(function() {
         else return false;
       }
   if(name == '' || mobile == '' || email == '' || company == '' || title == ''){
-    $('.alert').removeClass('alert-success').addClass('alert-error').html('请将带*号的必填项目填写完整').slideUp().slideDown();
+    $('.alert').removeClass('alert-success').addClass('alert-error').html('请将带*号的必填项目填写完整.').slideUp().slideDown();
     $("#submit_button").removeClass('disabled');
     return;
   }
@@ -49,6 +50,7 @@ $("#submit_button").click(function() {
   }
 
     if (isMobile(mobile) ==  false){
+      
     $('.alert').removeClass('alert-success').addClass('alert-error').html('请填写正确的手机号码').slideUp().slideDown();
     $("#submit_button").removeClass('disabled');
     return;
@@ -63,11 +65,11 @@ $("#submit_button").click(function() {
   }, function(data) {
     console.log('test')
     if (!data['error']) {
-      $('.alert').removeClass('alert-error').addClass('alert-success').html('<div class="success-title"><i class="icons success-icon"></i><span>提交成功</span></div>'+data['info']).slideUp().slideDown();
+      $('.alert').removeClass('alert-error').addClass('alert-success').html('<div class="success-title"><i class="icons success-icon"></i><span>提交成功</span></div>现在发送分享微博，现场领取精彩礼品，马上试试吧！ ').append(share_btn).slideUp().slideDown();
       $('#name,#mobile,#email,#company,#title').val('');
     } else {
       if(data['error_code'] == 10103)
-        $('.alert').removeClass('alert-success').addClass('alert-error').html('您已使用该邮箱进行过报名').slideUp().slideDown();
+        $('.alert').removeClass('alert-success').addClass('alert-error').html('您已使用该邮箱进行过报名').append(share_btn).slideUp().slideDown();
       else
         $('.alert').removeClass('alert-success').addClass('alert-error').html('提交失败').slideUp().slideDown();
     }
@@ -127,7 +129,7 @@ function agendaLoading(boxClass){
         return str;
     };
     
-    $.getJSON("http://mimas.businessvalue.com.cn/api?api_key=098f6bcd4621d373cade4e832627b4f6&api_sig=8af5f06d5a4c48fa826c015bebef03df&method=agenda.list&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?",function(result){
+    $.getJSON("http://mimas.businessvalue.com.cn/api?api_key=84021e748610b3ab89b11695a73c3c31&api_sig=ae7968741a47259462ff35854241fe83&method=agenda.list&event_key=94finaw6qhm1t3t2xbgksvv8aytga4eu&jsoncallback=?",function(result){
         var list_one = "",list_next_one = "",same_day;
         $.each(result,function(i,item){
             var day = 6;

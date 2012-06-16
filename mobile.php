@@ -6,7 +6,7 @@
     $position   = urldecode(@$_GET['position']);
 ?>
 <!DOCTYPE HTML>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:wb="http://open.weibo.com/wb">
 <head>
   <meta charset="UTF-8" />
   <title>MIIC-移动互联网创新大会</title>
@@ -22,8 +22,8 @@
   <link rel="stylesheet" href="css/mobile-style.css">
   <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
   <script src="js/modernizr-2.5.3.min.js" type="text/javascript"></script>
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3235681089" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
-  /* GA
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-31833303-1']);
   _gaq.push(['_trackPageview']);
@@ -33,7 +33,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-  */
   </script>
 </head>
 <body>
@@ -128,7 +127,7 @@
           </ul>
         </li>
       </ul>
-      <div class="b-bottom"><a href="detail.html"><span class="button more">查看更多</span></a></div>
+      <div class="b-bottom"><a href="detail.html"><span class="button more">查看详细日程</span></a></div>
     </article>
     <h2>现在报名</h2>
     <article id="submit-box">
@@ -156,6 +155,27 @@
           <div class="item submit b-bottom">
             <img src="css/images/loading.gif" alt="loading">
             <button id="submit_button" type="button" class="button submit">提交</button>
+            <div class="share-btn" style="display:none;"><script type="text/javascript">
+              (function(){
+var _w = 106 , _h = 24;
+  var param = {
+    url:'',
+    type:'5',
+    count:'',
+    appkey:'3235681089',
+    title:'#移动互联网创新大会#我报名参加了由《商业价值》杂志举办的2012移动互联网创新大会，参与互动，赢取小米手机，《商业价值》全年杂志，猛击这里：http://t.cn/zODI78l',
+    pic:'',
+    ralateUid:'',
+  language:'zh_cn',
+    rnd:new Date().valueOf()
+  }
+  var temp = [];
+  for( var p in param ){
+    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+  }
+  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+})()
+            </script></div>
           </div>
         </div>
       </form>
