@@ -33,7 +33,8 @@ color-stop(0.58,#dfe6ea)
 
 
 }
-.b-bottom .join{float:right;margin-right:20%;
+.b-bottom .join{display: block;
+    margin: 0 auto;
 border:1px solid #dfe6ea;
 background:-moz-linear-gradient(center bottom,#f16222 20%,#fb972c 58%) repeat scroll 0 0 transparent;background:-webkit-gradient(
 linear,

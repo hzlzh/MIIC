@@ -36,7 +36,6 @@
   </script>
 </head>
 <body>
-  <a href="#submit-box"><span class="icons jump-to"></span></a>
   <img style="display:none;" src="css/images/sprites.png" alt="load">
   <header class="header">
     <img src="images/m-miic-banner.png" alt="MIIC-移动互联网创新大会"></header>
@@ -135,46 +134,46 @@
         <div class="submit-box">
           <div class="item">
             姓名 <i>*</i>
-            <input id="name" type="text" class="input-small" value="<?php echo $name; ?>"></div>
+            <input id="name" type="text" class="input-small" value="<?php echo $name; ?>" name="name"></div>
           <div class="item">
             手机 <i>*</i>
-            <input id="mobile" type="text" class="input-small" value="<?php echo $mobile; ?>"></div>
+            <input id="mobile" type="text" class="input-small" value="<?php echo $mobile; ?>" name="mobile"></div>
           <div class="item">
             邮箱
             <i>*</i>
-            <input id="email" type="text" class="input-small" value="<?php echo $email; ?>"></div>
+            <input id="email" type="text" class="input-small" value="<?php echo $email; ?>" name="email"></div>
           <div class="item">
             公司
             <i>*</i>
-            <input id="company" type="text" class="input-small" value="<?php echo $company; ?>"></div>
+            <input id="company" type="text" class="input-small" value="<?php echo $company; ?>" name="company"></div>
           <div class="item">
             职位
             <i>*</i>
-            <input id="title" type="text" class="input-small" value="<?php echo $position; ?>"></div>
+            <input id="title" type="text" class="input-small" value="<?php echo $position; ?>" name="title"></div>
           <div class="alert"></div>
           <div class="item submit b-bottom">
             <img src="css/images/loading.gif" alt="loading">
             <button id="submit_button" type="button" class="button submit">提交</button>
             <div class="share-btn" style="display:none;"><script type="text/javascript">
               (function(){
-var _w = 106 , _h = 24;
-  var param = {
-    url:'',
-    type:'5',
-    count:'',
-    appkey:'3235681089',
-    title:'#移动互联网创新大会#我报名参加了由《商业价值》杂志举办的2012移动互联网创新大会，参与互动，赢取小米手机，《商业价值》全年杂志，猛击这里：http://t.cn/zODI78l',
-    pic:'',
-    ralateUid:'',
-  language:'zh_cn',
-    rnd:new Date().valueOf()
-  }
-  var temp = [];
-  for( var p in param ){
-    temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
-  }
-  document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
-})()
+              var _w = 106 , _h = 24;
+                var param = {
+                  url:'',
+                  type:'5',
+                  count:'',
+                  appkey:'3235681089',
+                  title:'#移动互联网创新大会#我报名参加了由《商业价值》杂志举办的2012移动互联网创新大会，参与互动，赢取小米手机，《商业价值》全年杂志，猛击这里：http://t.cn/zODI78l',
+                  pic:'',
+                  ralateUid:'',
+                language:'zh_cn',
+                  rnd:new Date().valueOf()
+                }
+                var temp = [];
+                for( var p in param ){
+                  temp.push(p + '=' + encodeURIComponent( param[p] || '' ) )
+                }
+                document.write('<iframe allowTransparency="true" frameborder="0" scrolling="no" src="http://hits.sinajs.cn/A1/weiboshare.html?' + temp.join('&') + '" width="'+ _w+'" height="'+_h+'"></iframe>')
+              })()
             </script></div>
           </div>
         </div>
