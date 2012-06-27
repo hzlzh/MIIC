@@ -97,3 +97,41 @@ color-stop(0.58,rgb(151,200,126))
 .meeting-agenda .agenda-box .name{font-size:13px;color:#3399ff;margin-left:10px;}
 .meeting-agenda .agenda-box .event-tip{border:2px solid #DDDDDD;border-radius:5px 5px 5px 5px;display:inline-block;font-size:13px;line-height:18px;margin-bottom:30px;padding:5px;text-align:center;}
 .meeting-agenda .agenda-box .event-tip strong{color:#EF3261;padding:0 5px;}
+
+
+
+/* for weibo submit page */
+.weibo .content article{border: none;}
+.weibo h3{font-size: 31px;
+    line-height: 31px;
+    margin-bottom: 20px;}
+.weibo .tip{font-size: 16px;
+    line-height: 24px;margin-top: 5px;}
+.weibo .content{padding:0 5%;}
+.weibo .content .alert{background: none repeat scroll 0 0 #EEF5E9;
+    border: 1px solid #C9DEB8;font-size: 16px;margin-top:10px;padding: 20px 0;\display: none;text-align: center;color: #727272;}
+.weibo .weibo-bt img{width:auto;}
+.weibo .weibo-bt{display: block;
+    margin-bottom: 20px;}
+.weibo .form-inline{margin: 0;overflow: hidden;bottom: 0;}
+.weibo .textarea-box{overflow: hidden;position: relative;}
+.weibo .text-count{bottom:0px;position: absolute;width: 90%;color:#999;display: block;text-align: right;margin-bottom: 5px;}
+.weibo .tag{text-align: right;margin-top: 5px;width: 90%;}
+.weibo textarea{width: 90%;height: 110px;}
+.weibo .b-bottom .disable{
+background:-moz-linear-gradient(center bottom,#c5cdd1 20%,#dfe6ea 58%) repeat scroll 0 0 transparent;background:-webkit-gradient(
+linear,
+left bottom,
+left top,
+color-stop(0.2,#c5cdd1),
+color-stop(0.58,#dfe6ea)
+);
+border: 1px solid #d2d2d2;
+}
+
+.weibo .b-bottom{width: 90%;}
+.weibo .success-title{text-align: left;margin: 0 auto 13px;overflow:hidden;width:181px;}
+.weibo .success-icon{float:left;margin-right:15px;background-position:0 -946px;display:block;height:38px;text-indent:-999px;width:50px;}
+.weibo span{color:#73a948;font-size:25px;height:35px;line-height:35px;}
+
+

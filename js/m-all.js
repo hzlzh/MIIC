@@ -128,3 +128,22 @@ function agendaLoading(boxClass){
     });
 }
 agendaLoading("#meeting-agenda .agenda-box .agenda-box-list");
+
+
+// weibo page submit textarea text count
+$('.weibo textarea').bind('focus keyup input paste',function(){
+  $('.text-count span').text(140-$(this).attr("value").length);
+});
+
+$('#weibo_submit_button').click(function(){
+  oauth_token = $('.weibo input[name="oauth_token"]').val();
+  oauth_token_secret = $('.weibo input[name="oauth_token_secret"]').val();
+  via = $('.weibo input[name="via"]').val();
+
+jQuery.post('/weibo/send', {via: 'value1',oauth_token: oauth_token,oauth_token_secret: oauth_token_secret}, function(data, textStatus, xhr) {
+  //optional stuff to do after success
+  console.log('here')
+});
+
+
+});
